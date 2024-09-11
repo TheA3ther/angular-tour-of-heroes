@@ -14,12 +14,6 @@ export class HeroesComponent {
   constructor(private heroService: HeroService, private messageService: MessageService) {}
 
   heroes : Hero[] = [];
-  selectedHero?: Hero;
-
-  onSelect(hero: Hero){
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`)
-  }
 
   ngOnInit() : void {
     this.getHeroes();
